@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Winter Website</title>
+    <style>
+        .container {
+          display: grid;
+          grid-template-areas:
+            "header header"
+            "menu content"
+            "footer footer";
+          grid-template-columns: 1.5fr 2.5fr;
+          gap: 5px;
+          background-color: #bdf4ff;
+          padding: 5px;
+        }
+        .container > div {
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 10px;
+        }
+        .container > div.header {
+          grid-area: header;
+          text-align: center;
+        }
+        .container > div.menu {
+          grid-area: menu;
+        }
+        .container > div.content {
+          grid-area: content;
+        }
+        .container > div.footer {
+          grid-area: footer;
+        }
+    	body {
+        	height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            font-family: cursive;
+            background: #bdf4ff;
+        }
+        
+        img {
+        	width: 100px;
+        }
+        
+        .snowflake {
+        	position: absolute;
+            font-size: 30px;
+            top: -30px;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+        	0% {
+            	transform: translateY(0);
+            }
+            100% {
+            	transform: translateY(100vh);
+            }
+        }
+        
+        .snowflake:nth-child(1) {
+        	left: 10%;
+            animation-duration: 7s;
+        }
+        .snowflake:nth-child(2) {
+        	left: 25%;
+            animation-duration: 10s;
+        }
+        .snowflake:nth-child(3) {
+        	left: 57%;
+            animation-duration: 4s;
+        }
+        .snowflake:nth-child(4) {
+        	left: 63%;
+            animation-duration: 12s;
+        }
+        .snowflake:nth-child(5) {
+        	left: 86%;
+            animation-duration: 3s;
+        }
+        .content {
+        	text-align: left;
+        }
+    </style>
+  </head>
+  
+  <body>
+  	<div class="snowflake">❄️</div>
+    <div class="snowflake">❄️</div>
+  	<div class="snowflake">❄️</div>
+  	<div class="snowflake">❄️</div>
+  	<div class="snowflake">❄️</div>
+    
+    <div class="container">
+      <div class="header">
+      	<h1>My Winter Website</h1>
+        </div>
+      <div class="menu">
+      	<p>Here's some fun online winter activities you can do if you're bored!</p>
+		<a href="https://santatracker.google.com/">Link to santa tracker</a>        		<br><br>
+        <a href="https://www.britannica.com/topic/Christmas">Read about the origins of Christmas</a>
+        <br><br>
+        <a href="https://www.snowpak.ca/canada/best-ski-resorts">Find a place to ski in Canada 🍁 </a>
+        <br>
+        </div>
+      <div class="content">
+        <h3>What's your favourite winter activity?</h3>
+        
+        <input type="checkbox" id="option1" name="option1" value="skiing">
+        <label for="option1"> Skiing </label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Ski_Famille_-_Family_Ski_Holidays.jpg">
+        <br>
+        
+        <input type="checkbox" id="option2" name="option2" value="snowboarding">
+        <label for="option2"> Snowboarding </label>
+        <img src="https://neversummer.com/cdn/shop/articles/PROTO_SPLIT_2.webp?v=1694199894">
+        <br>
+        
+        <input type="checkbox" id="option3" name="option3" value="sledding">
+        <label for="option3"> Sledding </label>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0l9AOL_JWSgOQT-o7TBmzkAAq2XRYtCGOwQ&s">
+        <br>
+        
+        <input type="checkbox" id="option4" name="option4" value="skating">
+        <label for="skating"> Skating </label>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVqEWWRiuI-LnvhPbly_xYS9LMffHngiWhZg&s">
+        <br>
+        
+        </div>
+      <div class="footer">
+      	<p>Happy holidays and have a joyous new year!</p>
+        <img src="https://i.ebayimg.com/images/g/qzgAAOSwBXFjkSsc/s-l1200.jpg">
+      </div>
+    </div>
+    
+  </body>
+
+</html>
